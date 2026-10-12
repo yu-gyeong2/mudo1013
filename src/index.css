@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Noto+Sans+KR:wght@400;600;800;900&family=Song+Myung&display=swap');
+@import "tailwindcss";
+
+:root {
+  --muhan-yellow: #FFE800;
+  --muhan-blue: #0066FF;
+  --muhan-red: #FF3344;
+  --muhan-skull: #1A1A1A;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #0c0f17;
+  color: #f1f5f9;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-dohyeon {
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.font-blackhan {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.font-gungseo {
+  font-family: 'Song Myung', 'Batang', serif;
+}
+
+/* 무한도전 시그니처 자막 스타일 */
+.muhan-caption {
+  font-family: 'Black Han Sans', sans-serif;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0 rgba(0,0,0,0.8);
+}
+
+.muhan-caption-yellow {
+  color: #FFF200;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0 #D63031;
+}
+
+.muhan-caption-blue {
+  color: #00D2D3;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0 #2E86DE;
+}
+
+.muhan-caption-skull {
+  color: #FFFFFF;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px  0px 15px rgba(255, 0, 0, 0.8);
+}
+
+/* 펄스 애니메이션 */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+/* 화면 흔들림 효과 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px) rotate(-1deg); }
+  40%, 80% { transform: translateX(4px) rotate(1deg); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out infinite;
+}
